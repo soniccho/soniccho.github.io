@@ -1,0 +1,42 @@
+---
+layout: post
+title: "파이썬으로 파일 이동시키기"
+subtitle: "파이썬으로 이미지파일 다른이름으로 저장하기"
+date: 2020-07-03 14:30:00
+background: '/img/bg-post.jpg'
+---
+
+<h2 class="section-heading">원본 폴더에 있는 파일을 이름변경하여 다른폴더에 이동시키는 스크립트</h2>
+
+<p>
+    #!/usr/bin/python
+    # -*- coding: utf-8 -*-
+    
+    import os
+    import shutil
+    
+    path = 'C:/Users/HS/Desktop/사진/' # 원본 폴더
+    resultPath = 'C:/Users/HS/Desktop/사진_이름변경/' # 이동시킬 폴더
+    
+    if not os.path.exists(resultPath):
+        os.mkdir(resultPath)
+    
+    list = os.listdir(path)
+    
+    list.sort()
+    
+    extList = ["jpg", "JPG"]
+    
+    for filename in list:
+    
+        baseName = filename.split('.')[0]
+        ext = filename.rsplit('.', 1)[1]
+    
+        # 파일 확장자가 (properties)인 것만 처리 
+        if any(format in ext for format in extList):
+            fromFilePathName = path + filename
+            resultFilePathName = resultPath + baseName.split('_')[0] + '.' + ext
+            shutil.copy(fromFilePathName, resultFilePathName)
+</p>
+
+© 2020 GitHub, Inc.
