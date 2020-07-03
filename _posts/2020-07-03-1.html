@@ -1,12 +1,10 @@
 ---
 layout: post
-title: "파이썬으로 파일 이동시키기"
-subtitle: "파이썬으로 이미지파일 다른이름으로 저장하기"
+title: "[Python] 파일 이동"
+subtitle: "이미지파일 다른이름으로 저장하기"
 date: 2020-07-03 14:30:00
 background: '/img/bg-post.jpg'
 ---
-
-<h2 class="section-heading">원본 폴더에 있는 파일을 이름변경하여 다른폴더에 이동시키는 스크립트</h2>
 
 <pre>
     #!/usr/bin/python
@@ -16,7 +14,7 @@ background: '/img/bg-post.jpg'
     import shutil
     
     path = 'C:/Users/HS/Desktop/사진/' # 원본 폴더
-    resultPath = 'C:/Users/HS/Desktop/사진_이름변경/' # 이동시킬 폴더
+    resultPath = 'C:/Users/HS/Desktop/사진_이름변경/' # 대상 폴더
     
     if not os.path.exists(resultPath):
         os.mkdir(resultPath)
@@ -37,6 +35,7 @@ background: '/img/bg-post.jpg'
             fromFilePathName = path + filename
             resultFilePathName = resultPath + baseName.split('_')[0] + '.' + ext
             shutil.copy(fromFilePathName, resultFilePathName)
+
 </pre>
 
 © 2020 GitHub, Inc.

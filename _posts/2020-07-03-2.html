@@ -1,0 +1,35 @@
+---
+layout: post
+title: "[Python] 이미지파일 용량 줄이기"
+subtitle: "Pillow 라이브러리 사용하여 이미지 용량 줄이기"
+date: 2020-07-03 15:00:00
+background: '/img/bg-post.jpg'
+---
+
+<pre>
+    #!/usr/bin/python
+    # -*- coding: utf-8 -*-
+    
+    import os
+    from PIL import Image
+    
+    path = 'C:/Users/HS/Desktop/사진_이름변경/' # 원본 폴더
+    resultPath = 'C:/Users/HS/Desktop/사진_크기변경/' # 대상 폴더
+    
+    if not os.path.exists(resultPath):
+        os.mkdir(resultPath)
+    
+    list = os.listdir(path)
+    
+    list.sort()
+    
+    for filename in list:
+    
+        file = path + filename
+    
+        img = Image.open(file)
+        img.save(os.path.join(resultPath, filename), 'JPEG', qualty=85) # 품질 85로 줄이면서 용량 줄이기
+    
+</pre>
+
+© 2020 GitHub, Inc.
