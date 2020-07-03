@@ -8,7 +8,7 @@ background: '/img/bg-post.jpg'
 
 <h2 class="section-heading">원본 폴더에 있는 파일을 이름변경하여 다른폴더에 이동시키는 스크립트</h2>
 
-<p>
+<pre>
     #!/usr/bin/python
     # -*- coding: utf-8 -*-
     
@@ -37,6 +37,6 @@ background: '/img/bg-post.jpg'
             fromFilePathName = path + filename
             resultFilePathName = resultPath + baseName.split('_')[0] + '.' + ext
             shutil.copy(fromFilePathName, resultFilePathName)
-</p>
+</pre>
 
 © 2020 GitHub, Inc.
