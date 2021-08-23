@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://soniccho.github.io/sitemap.xml
