@@ -30,7 +30,7 @@ background: '/img/bg-post.jpg'
         baseName = filename.split('.')[0]
         ext = filename.rsplit('.', 1)[1]
     
-        # 파일 확장자가 (properties)인 것만 처리 
+        # 파일 확장자 체크 
         if any(format in ext for format in extList):
             fromFilePathName = path + filename
             resultFilePathName = resultPath + baseName.split('_')[0] + '.' + ext
