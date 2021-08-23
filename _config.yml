@@ -3,7 +3,7 @@ email:              gustkd0@gmail.com
 description:        DevBlog by SonicCho
 author:             SonicCho
 baseurl:            ""
-url:                "https://github.com/soniccho/soniccho.github.io.git"
+url:                "https://soniccho.github.io"
 
 # Social Profiles
 twitter_username:   
